@@ -10,6 +10,9 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    SidemenuComponent
   ]
 })
 export class SharedModule { }
