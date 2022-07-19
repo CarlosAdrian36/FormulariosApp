@@ -1,1 +1,86 @@
-<p>switches works!</p>
+
+<h2>Reactivos: Switches</h2>
+<hr>
+
+<form >
+<!-- Radio -->
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Genero</label>
+    <div class="col-sm-9">
+        <div class="form-check">
+            <input class="form-check-input" 
+                    type="radio" 
+                    value="M"
+                    name="RadioGenero" 
+                    id="RadioMasculino"
+                    >
+            <label class="form-check-label" for="RadioMasculino">
+              Masculino
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" 
+                    type="radio" 
+                    value="F"
+                    name="RadioGenero" 
+                    id="Radiofemenino"
+                    >
+            <label class="form-check-label" for="Radiofemenino">
+              Femenino
+            </label>
+        </div>
+    </div>
+</div>
+<!-- switch -->
+
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Notificaciones</label>
+    <div class="col-sm-9">
+        <div class="form-check form-switch mt-2" >
+            <input class="form-check-input" 
+                    type="checkbox" 
+                    role="switch"
+                    id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked">Recivir notificaciones</label>
+          </div>
+    </div>
+</div>
+
+
+
+
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Terminos y condiciones</label>
+    <div class="col-sm-9"> 
+        <div class="form-check">
+            <input class="form-check-input" 
+                    type="checkbox"
+                    id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Acepto
+            </label>
+        </div>
+
+    </div>
+</div>
+<!-- Boton submit -->
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary float-end">
+            Guardar
+        </button>
+    </div>
+</div>
+    
+
+
+
+</form>
+
+<!-- <h5>Valor del formulario</h5>
+<pre>{{miFormulario.value | json}}</pre>
+<br>
+<h5>Valid:</h5>
+<pre>{{miFormulario.valid}}</pre>
+<br>
+<pre>Condiciones:</pre> -->

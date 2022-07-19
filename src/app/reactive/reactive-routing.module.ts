@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 
-import { SwitchesComponent } from '../template/switches/switches.component';
 import { BasicosComponent } from './basicos/basicos.component';
 import { DinamicosComponent } from './dinamicos/dinamicos.component';
+import { SwitchesComponent } from './switches/switches.component';
 
 const routes: Routes = [
   {
