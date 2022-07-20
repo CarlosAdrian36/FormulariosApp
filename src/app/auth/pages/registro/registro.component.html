@@ -1,1 +1,103 @@
-<p>registro works!</p>
+
+<h2>Validaciones Reativas</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="submitFormulario()">
+
+            <!-- nombre -->
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sm-9">
+                    <input type="text"
+                        class="form-control"
+                        formControlName="nombre"
+                        placeholder="Nombre del usuario">
+
+                        <span class="form-text text-danger"
+                                *ngIf="campoNoValido( 'nombre' )">
+                            Debe de ser en formato de nombre y apellido
+                        </span>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email"
+                        class="form-control"
+                        formControlName="email"
+                        placeholder="Correo del usuario">
+                    
+                    <span   class="form-text text-danger"
+                            *ngIf="campoNoValido( 'email' )">
+                       El correo es obligatorio
+                    </span>
+                        
+                </div>
+            </div>
+
+            <!-- Username -->
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Username</label>
+                <div class="col-sm-9">
+                    <input type="texto"
+                        class="form-control"
+                        formControlName="username"
+                        placeholder="Nombre codigo del usuario">
+
+                    <span   class="form-text text-danger"
+                        *ngIf="campoNoValido( 'username' )">
+                        El username no puede ser strider
+                </span>
+                        
+                </div>
+            </div>
+
+            <!-- Passwodr -->
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password"
+                        class="form-control"
+                        placeholder="Contraseña del usuario">
+                        
+                </div>
+            </div>
+
+            <!-- Confirmar Passwodr -->
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Confirmar la Contraseña</label>
+                <div class="col-sm-9">
+                    <input type="password"
+                        class="form-control"
+                        placeholder="Confirmar la contraseña del usuario">
+                        
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary float-end"
+                            type="submit">
+                        Registrarse
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<h5>Form valid: {{miFormulario.valid}}</h5>
+
+<h5>Nombre</h5>
+<pre>{{miFormulario.controls?.['nombre']?.errors | json}}</pre>
+
+<h5>Email</h5>
+<pre>{{miFormulario.controls?.['email']?.errors | json}}</pre>
+
+<h5>username</h5>
+<pre>{{miFormulario.controls?.['username']?.errors | json}}</pre>
